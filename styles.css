@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin: 80px 150px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+button#new-book {
+    padding: 10px;
+    font-size: 14px;
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+::backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.details {
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    top: 25%;
+    left: 40%;
+}
+
+fieldset {
+    border: 0;
+}
+
+form {
+    padding: 30px 60px;
+    margin: 0 0 10px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px;
+    border: none;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    border-radius: 4px;
+    border: 2px solid #dcdcdc;
+    padding: 10px;
+}
+
+fieldset > button {
+    padding: 10px;
+    margin: 15px;
+    width: 80px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#confirm:hover {
+    background-color: rgba(61, 164, 65);
+}
+
+#close:hover {
+    background-color: rgba(200, 61, 61);
+}
