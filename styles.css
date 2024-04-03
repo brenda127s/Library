@@ -95,3 +95,21 @@ fieldset > button {
 #close:hover {
     background-color: rgba(200, 61, 61);
 }
+
+/* Cards */
+
+.card {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    border: 1px solid red;
+    min-width: 300px;
+    min-height: 500px;
+}
+
+.has-read {
+    background-color: rgba(61, 164, 65);
+}
+
+.has-read.active {
+    background-color: rgba(200, 61, 61);
+}
