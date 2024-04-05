@@ -36,12 +36,8 @@ function confirmAction() {
     let hasRead;
     if (hasReadValue) {
         hasRead = true;
-        // cardHasRead.textContent = "Read";
-        // cardHasRead.style.backgroundColor = "rgba(61, 164, 65)";
     } else {
         hasRead = false;
-        // cardHasRead.textContent = "Unread";
-        // cardHasRead.style.backgroundColor = "rgba(200, 61, 61)";
     }
 
     const book = new Book(titleValue, authorValue, pagesValue, hasReadValue);
@@ -63,7 +59,23 @@ function confirmAction() {
     cardAuthor.textContent = "Written by: " + authorValue;
     cardPages.textContent = pagesValue + " pages";
     cardHasRead.classList.add("has-read");
+    cardDelete.classList.add("card-delete");
+
+    cardHasRead.addEventListener("click", () => {
+        let button = cardHasRead;
+        const parent = button.parentNode;
+        let parentNumber = parent.dataset.number;
     
+        if (button.textContent == "Read") {
+        button.textContent = "Unread";
+        button.style.backgroundColor = "rgb(255, 70, 70)";
+        myLibrary[parentNumber].read = false;
+        } else {
+        button.textContent = "Read";
+        button.style.backgroundColor = "rgb(42, 161, 42)";
+        myLibrary[parentNumber].read = true;
+        }
+        });
 
     if (hasRead === true) {
         cardHasRead.textContent = "Read";
@@ -73,10 +85,8 @@ function confirmAction() {
         cardHasRead.style.backgroundColor = "rgba(200, 61, 61)";
     };
     
-    
     cardDelete.classList.add("delete-card");
     cardDelete.textContent = "Delete";
-
     
     card.appendChild(cardTitle);
     card.appendChild(cardAuthor);
@@ -86,10 +96,9 @@ function confirmAction() {
 
     document.querySelector("#library").appendChild(card);
 
-
     cardDelete.addEventListener("click", () => {
         card.remove();
-    })
-}
-}
+    });
+};
+};
 
