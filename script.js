@@ -33,6 +33,12 @@ function confirmAction() {
     const pagesValue = document.querySelector("#page-numbers").value;
     let hasReadValue = document.querySelector("#has-read").checked;
 
+    if (!titleValue ||!authorValue ||!pagesValue ||!hasReadValue) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+
     let hasRead;
     if (hasReadValue) {
         hasRead = true;
@@ -101,4 +107,3 @@ function confirmAction() {
     });
 };
 };
-
